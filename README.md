@@ -1,2 +1,2 @@
-# ngx-dm-lib-template
-Angular Library with Demo App template
+# ngx-dm-hotkeys
+Angular service and helper components for hotkeys support in your App

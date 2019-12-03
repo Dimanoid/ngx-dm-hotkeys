@@ -19,10 +19,10 @@
       "dom"
     ],
     "paths": {
-      "%DM_LIB_TPL-NPM_NAME%": [
+      "@dimanoid/ngx-dm-hotkeys": [
         "dist/lib"
       ],
-      "%DM_LIB_TPL-NPM_NAME%/*": [
+      "@dimanoid/ngx-dm-hotkeys/*": [
         "dist/lib/*"
       ]
     }

@@ -1,8 +1,8 @@
 {
-    "name": "%DM_LIB_TPL-NPM_SCOPE%/%DM_LIB_TPL-NPM_NAME%",
+    "name": "@dimanoid/ngx-dm-hotkeys",
     "version": "0.0.1",
     "peerDependencies": {
-        "@angular/common": "^8.2.13",
-        "@angular/core": "^8.2.13"
+        "@angular/common": "^8.2.14",
+        "@angular/core": "^8.2.14"
     }
 }
