@@ -6,7 +6,7 @@ import { NgModule } from '@angular/core';
 
 import { DmDividerModule } from './dm-divider.module';
 
-import { DmLibTplModule } from '@dimanoid/ngx-dm-hotkeys';
+import { DmHotkeysModule } from '@dimanoid/ngx-dm-hotkeys';
 
 import { AppComponent } from './app.component';
 
@@ -17,7 +17,7 @@ import { AppComponent } from './app.component';
     imports: [
         BrowserModule, BrowserAnimationsModule, CommonModule,
         FormsModule, ReactiveFormsModule,
-        DmDividerModule, DmLibTemplateModule
+        DmDividerModule, DmHotkeysModule
     ],
     bootstrap: [AppComponent]
 })

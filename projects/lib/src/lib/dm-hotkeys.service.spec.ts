@@ -1,10 +1,10 @@
 import { createServiceFactory, SpectatorService } from '@ngneat/spectator';
 
-import { DmLibTplService } from './dm-lib-tpl.service';
+import { DmHotkeysService } from './dm-hotkeys.service';
 
-describe('DmLibTplService', () => {
-    let spectator: SpectatorService<DmLibTplService>;
-    const createService = createServiceFactory(DmLibTplService);
+describe('DmHotkeysService', () => {
+    let spectator: SpectatorService<DmHotkeysService>;
+    const createService = createServiceFactory(DmHotkeysService);
 
     beforeEach(() => spectator = createService());
 

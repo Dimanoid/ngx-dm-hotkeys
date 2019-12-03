@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { DmLibTplComponent } from './tpl-component/dm-lib-tpl.component';
+import { DmHotkeysHelpComponent } from './dm-hotkeys-help/dm-hotkeys-help.component';
 
 @NgModule({
     declarations: [
-        DmLibTplComponent
+        DmHotkeysHelpComponent
     ],
     imports: [
         CommonModule
     ],
     exports: [
-        DmLibTplComponent
+        DmHotkeysHelpComponent
     ]
 })
-export class DmLibTplModule { }
+export class DmHotkeysModule { }

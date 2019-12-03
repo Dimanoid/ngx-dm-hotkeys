@@ -7,7 +7,7 @@ import {
 } from '@angular/core';
 import { InputNumber, InputBoolean } from '../utils';
 
-import { DmLibTplService } from '../dm-lib-tpl.service';
+import { DmHotkeysService } from '../dm-hotkeys.service';
 
 export const MIN_ITEM_SIZE = 30;
 
@@ -31,22 +31,20 @@ export interface DmTableHeaderEvent {
 }
 
 @Component({
-    selector: 'dm-lib-tpl-component',
-    exportAs: 'dmLibTplComponent',
-    templateUrl: './dm-lib-tpl.component.html',
-    styleUrls: ['./dm-lib-tpl.component.scss'],
+    selector: 'dm-hotkeys-help, [dm-hotkeys-help]',
+    exportAs: 'dmHotkeys',
+    templateUrl: './dm-hotkeys-help.component.html',
+    styleUrls: ['./dm-hotkeys-help.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
     encapsulation: ViewEncapsulation.None
 })
-export class DmLibTplComponent implements OnInit, AfterViewInit, OnChanges, AfterContentInit {
-    @HostBinding('class.tpl-component-css-class') _hostCss = true;
-
+export class DmHotkeysHelpComponent implements OnInit, AfterViewInit, OnChanges, AfterContentInit {
     @Input() @InputBoolean() booleanProperty: boolean = false;
-    
+
     @Input() @InputNumber() numberProperty: number;
     @Output() numberPropertyChange: EventEmitter<number> = new EventEmitter();
 
-    constructor(private _elemRef: ElementRef, private _cdr: ChangeDetectorRef, private _ngZone: NgZone, private _srv: DmLibTplService) {
+    constructor(private _elemRef: ElementRef, private _cdr: ChangeDetectorRef, private _ngZone: NgZone, private _srv: DmHotkeysService) {
     }
 
     ngOnInit() {

@@ -1,3 +1,3 @@
-export { DmLibTplModule } from './lib/dm-lib-tpl.module';
-export { DmLibTplService } from './lib/dm-lib-tpl.service';
-export { DmLibTplComponent } from './lib/tpl-component/dm-lib-tpl.component';
+export { DmHotkeysModule } from './lib/dm-hotkeys.module';
+export { DmHotkeysService } from './lib/dm-hotkeys.service';
+export { DmHotkeysHelpComponent } from './lib/dm-hotkeys-help/dm-hotkeys-help.component';
