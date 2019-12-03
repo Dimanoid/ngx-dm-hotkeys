@@ -1,0 +1,49 @@
+{
+    "name": "%DM_LIB_TPL-NPM_SCOPE%/%DM_LIB_TPL-NPM_NAME%",
+    "version": "0.0.1",
+    "scripts": {
+        "build": "ng build lib",
+        "build:demo": "ng build --aot --prod --base-href /%DM_LIB_TPL-REPO_NAME%/ demo-app",
+        "test": "jest --verbose projects/lib",
+        "test:watch": "jest projects/lib --watch --notify",
+        "cover": "jest projects/lib --coverage",
+        "coverall": "jest projects/lib --coverage && cat ./coverage/lcov.info | coveralls",
+        "lint": "ng lint",
+        "publish": "npm publish dist/lib --access public",
+        "up": "git diff-index --quiet HEAD -- && cd projects/lib && npm version patch && git add package.json && git commit -m \"version bump [ci skip]\" package.json && cd ../.. && npm version patch",
+        "up:minor": "git diff-index --quiet HEAD -- && cd projects/lib && npm version minor && git add package.json && git commit -m \"version bump [ci skip]\" package.json && cd ../.. && npm version minor"
+    },
+    "dependencies": {
+        "@angular/animations": "~8.2.14",
+        "@angular/common": "~8.2.14",
+        "@angular/compiler": "~8.2.14",
+        "@angular/core": "~8.2.14",
+        "@angular/forms": "~8.2.14",
+        "@angular/platform-browser": "~8.2.14",
+        "@angular/platform-browser-dynamic": "~8.2.14",
+        "@angular/router": "~8.2.14",
+        "rxjs": "~6.5.3",
+        "tslib": "^1.10.0",
+        "zone.js": "~0.10.2"
+    },
+    "devDependencies": {
+        "@angular-builders/jest": "^8.3.1",
+        "@angular-devkit/build-angular": "~0.803.19",
+        "@angular-devkit/build-ng-packagr": "~0.803.19",
+        "@angular/cli": "~8.3.19",
+        "@angular/compiler-cli": "~8.2.14",
+        "@angular/language-service": "~8.2.14",
+        "@ngneat/spectator": "^4.6.0",
+        "@types/jest": "^24.0.23",
+        "@types/node": "~12.12.12",
+        "codelyzer": "^5.2.0",
+        "jest": "^24.9.0",
+        "jest-preset-angular": "^7.1.1",
+        "resize-observer-polyfill": "^1.5.1",
+        "ng-packagr": "^5.7.1",
+        "ts-node": "~8.5.2",
+        "tsickle": "^0.37.1",
+        "tslint": "~5.20.1",
+        "typescript": "~3.5.3"
+    }
+}
