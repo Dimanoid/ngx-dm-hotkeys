@@ -127,13 +127,11 @@ export class DmKey {
     match(e: KeyboardEvent): boolean {
         return e.altKey == this.alt
             && e.shiftKey == this.shift
-            && (
-                (this.cmd && (e.metaKey || e.ctrlKey)) || (!this.cmd && !e.metaKey && !e.ctrlKey)
-            )
+            && ((this.cmd && (e.metaKey || e.ctrlKey)) || (!this.cmd && !e.metaKey && !e.ctrlKey))
             && e.code == this.key;
     }
 
-    asText(isMac = false): string {
+    asString(isMac = false): string {
         let m = '';
         if (this.cmd) {
             m = isMac ? 'Meta + ' : 'Ctrl + ';
@@ -146,6 +144,27 @@ export class DmKey {
         }
         const c = KEY2CHAR[this.key];
         return c ? m + c : '<None>';
+    }
+
+    asStringArray(isMac = false): string[] {
+        let m = [];
+        if (this.cmd) {
+            m.push(isMac ? 'Meta' : 'Ctrl');
+        }
+        if (this.alt) {
+            m.push('Alt');
+        }
+        if (this.shift) {
+            m.push('Shift');
+        }
+        const c = KEY2CHAR[this.key];
+        if (c) {
+            m.push(c);
+        }
+        else {
+            m = ['<None>'];
+        }
+        return m;
     }
 
 }
